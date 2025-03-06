@@ -3,7 +3,7 @@
 import pickle
 
 from openai import OpenAI
-from create_db import Database, Entry
+from structures import Database, Entry
 from create_embeddings import get_embeddings
 
 from sklearn.neighbors import NearestNeighbors

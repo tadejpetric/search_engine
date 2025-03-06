@@ -1,7 +1,7 @@
 
 
 from openai import OpenAI
-from structures import WikiPage
+from structures import WikiPage, Entry, Database
 from create_questions import get_questions
 from iter_test import iter_wiki_pages, FILE_PATH
 from create_embeddings import get_embeddings
@@ -18,16 +18,6 @@ logging.basicConfig(level=logging.INFO)
 n_wiki_pages = 10
 n_question_per_page = 5
 
-@dataclass
-class Entry:
-    title: str
-    url: str
-    question: str
-    embedding: np.ndarray
-
-@dataclass
-class Database:
-    entries: list[Entry]
 
 
 
